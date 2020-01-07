@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="jquery-1.12.4.js"></script>
+<script type="text/javascript" src="js/My97DatePicker/WdatePicker.js"></script>
+<link
+	href="http://localhost:8080/jboa/js/My97DatePicker/skin/WdatePicker.css"
+	rel="stylesheet" type="text/css">
+<script>
+	$(function(){
+		 //日期选择控件
+	 	$("#startDate").click(function(){
+			WdatePicker({dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'endDate\')}',isShowClear:true, readOnly:true });
+		});
+		$("#endDate").click(function(){
+			WdatePicker({dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'startDate\')}',isShowClear:true, readOnly:true });
+		});
+	});
+</script>
+</head>
+<body>
+	<div class="action  divaction">
+		<div class="t">请假列表</div>
+		<div class="pages">
+			<div class="forms">
+				<form id="leave_searchLeave_action" name="queryForm"
+					action="ckqj.html"
+					method="get">
+					<label for="time">开始时间</label> <input type="text" name="sTime"
+						value="" id="startDate" class="nwinput"> <label
+						for="end-time">结束时间</label> <input type="text" name="eTime"
+						value="" id="endDate" class="nwinput" readonly=""> <input
+						type="hidden" name="pageNo" value="1"> <input
+						type="hidden" name="pageSize" value="5"> <input
+						type="submit" id="leave_searchLeave_action_0" value="查询"
+						class="submit_01">
+
+				</form>
+			</div>
+			<!--增加报销单 区域 开始-->
+			<table width="90%" border="0" cellspacing="0" cellpadding="0"
+				class="list items">
+				<thead>
+					<tr class="even">
+						<td>编号</td>
+						<td>名称</td>
+						<td>发起时间</td>
+						<td>审批时间</td>
+						<td>审批意见</td>
+						<td>待处理人</td>
+						<td>审批状态</td>
+						<td>操作</td>
+					</tr>
+				</thead>
+				<tbody>
+					
+						<tr>
+							<td><a href="javascript:void(0)">139</a></td>
+							<td>王健林请假1天</td>
+							<td>2019-08-10 11:02:55</td>
+							<td>2019-08-13 14:22:54</td>
+							<td>
+								
+								
+									拒绝
+								
+							</td>
+							<td>
+								无
+							</td>
+							<td>
+								已审批
+							</td>
+							<td>
+								<a href="qjxq.html">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">137</a></td>
+							<td>王健林请假1天</td>
+							<td>2019-08-10 10:16:53</td>
+							<td>2019-08-13 14:23:14</td>
+							<td>
+								
+									通过
+								
+								
+							</td>
+							<td>
+								王岐山
+							</td>
+							<td>
+								已审批
+							</td>
+							<td>
+								<a href="qjxq.html">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">125</a></td>
+							<td>王健林请假14天</td>
+							<td>2019-08-02 14:05:12</td>
+							<td></td>
+							<td>
+								
+								
+							</td>
+							<td>
+								presidentXi
+							</td>
+							<td>
+								待审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=125">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">122</a></td>
+							<td>王健林请假1天</td>
+							<td>2019-06-19 07:59:54</td>
+							<td></td>
+							<td>
+								
+								
+							</td>
+							<td>
+								presidentXi
+							</td>
+							<td>
+								待审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=122">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">114</a></td>
+							<td>王健林请假8天</td>
+							<td>2019-01-04 23:20:07</td>
+							<td>2019-01-04 23:21:41</td>
+							<td>
+								
+									通过
+								
+								
+							</td>
+							<td>
+								王岐山
+							</td>
+							<td>
+								已审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=114">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">113</a></td>
+							<td>王健林请假14天</td>
+							<td>2019-01-04 20:36:22</td>
+							<td>2019-01-04 23:23:00</td>
+							<td>
+								
+									通过
+								
+								
+							</td>
+							<td>
+								王岐山
+							</td>
+							<td>
+								已审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=113">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">102</a></td>
+							<td>王健林请假1天</td>
+							<td>2019-01-01 11:19:33</td>
+							<td></td>
+							<td>
+								
+								
+							</td>
+							<td>
+								presidentXi
+							</td>
+							<td>
+								待审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=102">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">90</a></td>
+							<td>王健林请假2天</td>
+							<td>2018-12-07 07:50:16</td>
+							<td>2019-01-04 23:21:11</td>
+							<td>
+								
+								
+									拒绝
+								
+							</td>
+							<td>
+								无
+							</td>
+							<td>
+								已审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=90">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">77</a></td>
+							<td>王健林请假1天</td>
+							<td>2018-12-06 08:08:18</td>
+							<td>2018-12-06 20:11:37</td>
+							<td>
+								
+								
+									拒绝
+								
+							</td>
+							<td>
+								无
+							</td>
+							<td>
+								已审批
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=77">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+						<tr>
+							<td><a href="javascript:void(0)">50</a></td>
+							<td>王健林请假3天</td>
+							<td>2018-12-03 13:59:28</td>
+							<td>2018-12-03 14:09:07</td>
+							<td>
+								
+									通过
+								
+								
+							</td>
+							<td>
+								无
+							</td>
+							<td>
+								已存档
+							</td>
+							<td>
+								<a href="/jboa/leave/getDetail?leaveId=50">
+									<img src="images/search.gif" width="16" height="15">
+								</a>
+								
+							</td>
+						</tr>
+					
+
+					<!-- <tr>
+						<td><a href="leave_getLeaveById.action?leave.id=143">143</a></td>
+						<td>张平请假1.0天</td>
+						<td>2013-09-09 15:10</td>
+						<td></td>
+						<td></td>
+						<td>待审批</td>
+						<td>
+							<a href="claimVoucher_toUpdate.action?claimVoucher.id=133">
+									<img src="images/edit.gif" width="16" height="16">
+							</a> 
+							<a onclick="delVoucher(133)" href="#"> <img
+								src="images/delete.gif" width="16" height="16">
+							</a> 
+							<a target="rightFrame" href="leaveDetail.jsp"><img
+								src="images/search.gif" width="16" height="15"></a>
+							<a target="rightFrame" href="leaveCheck.jsp"> <img
+								src="images/sub.gif" width="16" height="16"></a></td>
+					</tr> -->
+
+					<tr>
+						<td colspan="7" align="center">
+							<div class="page-bar">
+
+								<a href="/jboa/leave/findList?sTime=&eTime=&pageNum=1&pageSize=10">首页</a>
+								&nbsp;&nbsp;
+								
+								&nbsp;&nbsp;
+								
+									<a href="/jboa/leave/findList?sTime=&eTime=&pageNum=2&pageSize=10">下一页</a>
+								
+								&nbsp;&nbsp; <a href="/jboa/leave/findList?sTime=&eTime=&pageNum=3&pageSize=10">末页</a>							
+								&nbsp;&nbsp; &nbsp;&nbsp;第 1页/共3页&nbsp;&nbsp;共21条记录
+							</div>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<!--请假 区域 结束-->
+		</div>
+	</div>
+</body>
+</html>
